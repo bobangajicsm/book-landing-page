@@ -1,0 +1,241 @@
+@font-face {
+    font-family: 'Istok Web';
+    src: url(font/IstokWeb-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Istok Web';
+    src: url(font/IstokWeb-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(font/Poppins-Light.ttf);
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(font/Poppins-Bold.ttf);
+    font-weight: 700;
+}
+
+:root {
+    --primary-color: #013456;
+    --accent-color: #FAD405;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 81px;
+    max-width: 1231px;
+    margin: 0 auto;
+    font-family: 'Istok Web';
+}
+
+.header_title {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header span {
+    font-weight: 700;
+    font-size: 40px;
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.header .plane-ico {
+    color: var(--accent-color);
+}
+
+.header_navigation {
+    display: flex;
+    height: 52px;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.header_navigation a {
+    text-decoration: none;
+    margin-left: 29px;
+    font-size: 36px;
+    color: var(--primary-color);
+}
+
+.header .menu-ico,
+.header .close-ico {
+    display: none;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.wrapper aside {
+    width: 50%;
+    margin-top: 46px;
+    position: relative;
+}
+
+main {
+    width: 50%;
+    margin-top: 91px;
+    max-width: 575px;
+}
+
+main h1 {
+    color: var(--primary-color);
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Poppins';
+    margin-top: 0;
+    margin-bottom: 14px;
+}
+
+main p {
+    font-size: 20px;
+    font-family: 'Poppins';
+    font-weight: 100;
+    margin-bottom: 50px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    padding: 16px 47px;
+    border-radius: 50px;
+    border: none;
+}
+
+.button_buy-now {
+    background-color: var(--accent-color);
+    font-size: 32px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.button_read-more {
+    background-color: var(--primary-color);
+    font-size: 32px;
+    font-family: 'Poppins';
+    font-weight: 700;
+    color: white;
+}
+
+.book_circle {
+    width: 785px;
+    height: 785px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    right: 83px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.book {
+    height: 785px;
+    margin-bottom: 54px;
+}
+
+@media screen and (max-width: 1400px) {
+    .header {
+        width: 90%;
+        padding-top: 20px;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    main,
+    .wrapper aside {
+        width: 90%;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .book {
+        height: 300px;
+        margin-bottom: 0px;
+    }
+
+    .book_circle {
+        position: initial;
+        max-width: 300px;
+        max-height: 300px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .book_circle img {
+        max-width: 150px;
+    }
+
+    main h1 {
+        font-size: 24px;
+    }
+
+    main p {
+        font-size: 16px;
+    }
+
+    .header_navigation {
+        position: absolute;
+        background-color: var(--primary-color);
+        top: 0;
+        left: 0;
+        padding-top: 50px;
+        width: 100%;
+        height: 100%;
+        display: none;
+        z-index: 1;
+    }
+
+    .header_navigation a {
+        color: var(--accent-color);
+        display: block;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .header .menu-ico {
+        display: block;
+        font-size: 30px;
+        line-height: 45px;
+        color: var(--primary-color);
+        cursor: pointer;
+    }
+
+    .header .close-ico {
+        z-index: 1;
+        font-size: 30px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: var(--accent-color);
+    }
+
+    .header .plane-ico {
+        display: none;
+    }
+
+    .button_buy-now, .button_read-more {
+        font-size: 16px;
+    }
+
+    .buttons button {
+        padding: 16px 25px;
+    }
+}
